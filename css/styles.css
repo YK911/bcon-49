@@ -4,63 +4,77 @@
   |============================
 */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
   color: #303030;
 }
-
+/* reset styles */
 a {
   text-decoration: none;
   color: currentColor;
 }
-
 ul {
   list-style: none;
 }
-
 button {
   font-family: inherit;
   cursor: pointer;
 }
-
 .visually-hidden {
   position: absolute;
+  white-space: nowrap;
   width: 1px;
   height: 1px;
-  margin: -1px;
+  overflow: hidden;
   border: 0;
   padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  overflow: hidden;
+  clip-path: inset(50%);
+  margin: -1px;
 }
-
+/* reset end */
 .uppertitle {
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
   text-transform: uppercase;
 }
-.title {
+.uppertitle-theme-dark {
+  color: rgba(157, 164, 189, 0.6);
 }
-
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+}
+.title-theme-dark {
+  color: #ffffff;
+}
+.subtitle {
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: #555555;
+}
 .btn {
   font-weight: 600;
   font-size: 12px;
   line-height: calc(16 / 12);
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  color: #303030;
 
-  color: #ffffff;
+  background-color: transparent;
 }
-
 .btn:hover,
 .btn:focus {
-  bacground-color: #ff6c00;
+  background-color: #ff6c00;
+}
+.btn-theme-dark {
+  color: #ffffff;
 }
 /**
   |============================
@@ -68,6 +82,7 @@ button {
   |============================
 */
 .header {
+  background-color: #111319;
 }
 .logo {
 }
@@ -79,22 +94,73 @@ button {
 }
 .nav-item {
 }
-.nav-link,
+.nav-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: #ff6c00;
+}
 .header-link {
   font-weight: 600;
   font-size: 12px;
   line-height: calc(16 / 12);
   letter-spacing: 0.1em;
-
   color: #ffffff;
 }
-.nav-link:hover,
-.nav-link:focus,
 .header-link:hover,
 .header-link:focus {
   color: #ff6c00;
 }
-
+.header-button {
+}
+/**
+  |============================
+  | Hero styles
+  |============================
+*/
+.hero {
+  background-color: #111319;
+}
+.media {
+}
+.media-item {
+}
+.media-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+  color: #303030;
+}
+.media-link:hover,
+.media-link:focus {
+  color: #ff6c00;
+}
+.hero-title {
+  font-size: 72px;
+  line-height: calc(85 / 72);
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+.hero-desc {
+  color: #9da4bd;
+}
+/* slider */
+.slider-pagination {
+}
+.slider-pagination-item {
+}
+.slider-controls {
+}
+.slider-controls-item {
+}
+.slider-controls-btn {
+}
 /**
   |============================
   | About styles
@@ -108,14 +174,148 @@ button {
 }
 .about-img {
 }
-.about-uppertitle {
-}
-.about-title {
-}
-.about-title {
-}
-.about-subtitle {
+.about-desc {
+  font-size: 14px;
+  line-height: calc(26 / 14);
   color: #555555;
 }
-.about-desc {
+/**
+  |============================
+  | Price styles
+  |============================
+*/
+.price {
+  background-color: #111319;
+}
+.price-wrapper {
+}
+.price-list {
+}
+.price-item {
+  color: #9da4bd;
+}
+.price-line {
+}
+/**
+  |============================
+  | Benefits styles
+  |============================
+*/
+.benefits {
+}
+.benefits-list {
+}
+.benefits-item {
+}
+.benefits-quentity {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(57 / 42);
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.benefits-decor {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(22 / 16);
+  text-align: center;
+  color: #ff6c00;
+}
+.benefits-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-align: center;
+}
+/**
+  |============================
+  | Team styles
+  |============================
+*/
+.team {
+}
+.team-list {
+}
+.team-item {
+}
+.team-avatar {
+}
+.team-name {
+  text-align: center;
+}
+.team-position {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  text-align: center;
+  color: #ff6c00;
+}
+.socials {
+}
+.socials-item {
+}
+.socials-link {
+}
+.socials-icon {
+}
+/**
+  |============================
+  | Gallery styles
+  |============================
+*/
+.gallery {
+}
+.gallery-list {
+}
+.gallery-item {
+}
+.gallery-img {
+}
+/**
+  |============================
+  | Booking styles
+  |============================
+*/
+.booking {
+  background-color: #111319;
+}
+/**
+  |============================
+  | Contacts styles
+  |============================
+*/
+.contacts {
+  background-color: #111319;
+}
+.contacts-group {
+  font-style: normal;
+}
+.contacts-list {
+}
+.contacts-item {
+}
+.contacts-link {
+  color: #9da4bd;
+}
+.schedule-uppertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+}
+.schedule-desc {
+  color: #9da4bd;
+}
+/**
+  |============================
+  | Footer styles
+  |============================
+*/
+.footer {
+}
+.footer-copyright {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  color: #9da4bd;
 }
