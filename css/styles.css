@@ -1,0 +1,87 @@
+/**
+  |============================
+  | Base styles
+  |============================
+*/
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: #303030;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/**
+  |============================
+  | Header styles
+  |============================
+*/
+.header {
+}
+.logo {
+}
+.logo-img {
+}
+.nav {
+}
+.nav-list {
+}
+.nav-item {
+}
+.nav-link {
+}
+.header-link {
+}
+
+/**
+  |============================
+  | About styles
+  |============================
+*/
+.about {
+}
+.about-list {
+}
+.about-item {
+}
+.about-img {
+}
+.about-uppertitle {
+}
+.about-title {
+}
+.about-title {
+}
+.about-subtitle {
+  color: #555555;
+}
+.about-desc {
+}
