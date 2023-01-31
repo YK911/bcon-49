@@ -39,6 +39,29 @@ button {
   overflow: hidden;
 }
 
+.uppertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+}
+.title {
+}
+
+.btn {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.btn:hover,
+.btn:focus {
+  bacground-color: #ff6c00;
+}
 /**
   |============================
   | Header styles
@@ -56,9 +79,20 @@ button {
 }
 .nav-item {
 }
-.nav-link {
-}
+.nav-link,
 .header-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+
+  color: #ffffff;
+}
+.nav-link:hover,
+.nav-link:focus,
+.header-link:hover,
+.header-link:focus {
+  color: #ff6c00;
 }
 
 /**
