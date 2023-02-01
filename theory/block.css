@@ -1,0 +1,35 @@
+.border-box {
+  background-color: lightgreen;
+  color: green;
+
+  width: 400px;
+  padding: 20px 50px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 10px 40px;
+}
+
+.text {
+  margin-top: 150px;
+}
+
+section {
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
+span {
+  display: inline-block;
+
+  display: none;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  margin-top: 50px;
+}

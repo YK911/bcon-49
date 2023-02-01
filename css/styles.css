@@ -1,26 +1,58 @@
+:root {
+  /* Fonts */
+  --primary-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* Colors */
+  --main-txt-cl: #303030;
+  --accent-txt-cl: #ff6c00;
+  --light-txt-cl: #ffffff;
+  --gray-txt-cl: rgb(157, 164, 189);
+  --gray-60-txt-cl: rgba(157, 164, 189, 0.6);
+
+  --main-bg-cl: #303030;
+  --accent-bg-cl: #ff6c00;
+
+  /* Others */
+  --radius: 25px;
+}
 /**
   |============================
   | Base styles
   |============================
 */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--primary-font);
   font-size: 18px;
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
-  color: #303030;
+  color: var(--main-txt-cl);
 }
 /* reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 a {
   text-decoration: none;
   color: currentColor;
 }
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 button {
   font-family: inherit;
   cursor: pointer;
+}
+img {
+  display: block;
 }
 .visually-hidden {
   position: absolute;
@@ -35,6 +67,21 @@ button {
   margin: -1px;
 }
 /* reset end */
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
 .uppertitle {
   font-weight: 600;
   font-size: 11px;
@@ -45,13 +92,13 @@ button {
   color: rgba(157, 164, 189, 0.6);
 }
 .title {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--secondary-font);
   font-size: 42px;
   line-height: calc(49 / 42);
   letter-spacing: 0.05em;
 }
 .title-theme-dark {
-  color: #ffffff;
+  color: var(--light-txt-cl);
 }
 .subtitle {
   font-size: 18px;
@@ -60,6 +107,10 @@ button {
   color: #555555;
 }
 .btn {
+  min-width: 160px;
+  min-height: 40px;
+  padding: 11px 19px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: calc(16 / 12);
@@ -68,13 +119,15 @@ button {
   color: #303030;
 
   background-color: transparent;
+  border: 1px solid var(--accent-bg-cl);
+  border-radius: var(--radius);
 }
 .btn:hover,
 .btn:focus {
-  background-color: #ff6c00;
+  background-color: var(--accent-bg-cl);
 }
 .btn-theme-dark {
-  color: #ffffff;
+  color: var(--light-txt-cl);
 }
 /**
   |============================
@@ -82,6 +135,8 @@ button {
   |============================
 */
 .header {
+  padding-top: 32px;
+  padding-bottom: 32px;
   background-color: #111319;
 }
 .logo {
@@ -99,22 +154,22 @@ button {
   font-size: 12px;
   line-height: calc(16 / 12);
   letter-spacing: 0.1em;
-  color: #ffffff;
+  color: var(--light-txt-cl);
 }
 .nav-link:hover,
 .nav-link:focus {
-  color: #ff6c00;
+  color: var(--accent-txt-cl);
 }
 .header-link {
   font-weight: 600;
   font-size: 12px;
   line-height: calc(16 / 12);
   letter-spacing: 0.1em;
-  color: #ffffff;
+  color: var(--light-txt-cl);
 }
 .header-link:hover,
 .header-link:focus {
-  color: #ff6c00;
+  color: var(--accent-txt-cl);
 }
 .header-button {
 }
@@ -139,16 +194,16 @@ button {
 }
 .media-link:hover,
 .media-link:focus {
-  color: #ff6c00;
+  color: var(--accent-txt-cl);
 }
 .hero-title {
   font-size: 72px;
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
-  color: #ffffff;
+  color: var(--light-txt-cl);
 }
 .hero-desc {
-  color: #9da4bd;
+  color: var(--gray-txt-cl);
 }
 /* slider */
 .slider-pagination {
@@ -192,7 +247,7 @@ button {
 .price-list {
 }
 .price-item {
-  color: #9da4bd;
+  color: var(--gray-txt-cl);
 }
 .price-line {
 }
@@ -219,7 +274,7 @@ button {
   font-size: 16px;
   line-height: calc(22 / 16);
   text-align: center;
-  color: #ff6c00;
+  color: var(--accent-txt-cl);
 }
 .benefits-text {
   font-weight: 600;
@@ -247,7 +302,7 @@ button {
   font-size: 14px;
   line-height: calc(19 / 14);
   text-align: center;
-  color: #ff6c00;
+  color: var(--accent-txt-cl);
 }
 .socials {
 }
@@ -275,8 +330,10 @@ button {
   | Booking styles
   |============================
 */
-.booking {
+.booking-wrapper {
   background-color: #111319;
+}
+.booking {
 }
 /**
   |============================
@@ -284,7 +341,6 @@ button {
   |============================
 */
 .contacts {
-  background-color: #111319;
 }
 .contacts-group {
   font-style: normal;
@@ -294,17 +350,17 @@ button {
 .contacts-item {
 }
 .contacts-link {
-  color: #9da4bd;
+  color: var(--gray-txt-cl);
 }
 .schedule-uppertitle {
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
   text-transform: uppercase;
-  color: rgba(157, 164, 189, 0.6);
+  color: var(--gray-60-txt-cl);
 }
 .schedule-desc {
-  color: #9da4bd;
+  color: var(--gray-txt-cl);
 }
 /**
   |============================
@@ -317,5 +373,5 @@ button {
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
-  color: #9da4bd;
+  color: var(--gray-txt-cl);
 }
