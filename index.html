@@ -36,7 +36,7 @@
   <body>
     <!-- Header section -->
     <header class="header">
-      <div class="container">
+      <div class="header-container container">
         <a class="logo" href="./index.html">
           <img
             class="logo-img"
@@ -68,8 +68,8 @@
     </header>
     <main>
       <!-- Hero section -->
-      <section class="hero section">
-        <div class="container">
+      <section class="hero">
+        <div class="hero-container container">
           <ul class="media">
             <li class="media-item">
               <a
@@ -92,11 +92,13 @@
               </a>
             </li>
           </ul>
-          <p class="uppertitle">A hair salon for men in Kyiv</p>
-          <h1 class="hero-title">BarberShop</h1>
-          <p class="hero-desc">
-            We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
-          </p>
+          <div class="hero-right-side">
+            <p class="uppertitle">A hair salon for men in Kyiv</p>
+            <h1 class="hero-title">BarberShop</h1>
+            <p class="hero-desc">
+              We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
+            </p>
+          </div>
           <!-- slider pagination -->
           <ul class="slider-pagination" hidden>
             <li class="slider-pagination-item"></li>
@@ -116,7 +118,7 @@
       </section>
       <!-- About section -->
       <section class="about section" id="about">
-        <div class="container">
+        <div class="about-container container">
           <ul class="about-list">
             <li class="about-item">
               <img class="about-img" src="./images/about/img-1.jpg" alt width="270" height="445" />
@@ -125,18 +127,20 @@
               <img class="about-img" src="./images/about/img-2.jpg" alt width="270" height="445" />
             </li>
           </ul>
-          <p class="uppertitle">About</p>
-          <h2 class="title">Best Barbershop in your city</h2>
-          <p class="subtitle"
-            >If you want to add more confidence to your image, you should visit us.</p
-          >
-          <p class="about-desc">
-            We are a team that never stops at what has been achieved and are thirsty for changes.
-            And when you fall into the hands of our master, you will never be the same again. We are
-            a team that is always "on the same wave" with clients. Therefore, we are always ready to
-            improve everyone who comes to us!
-          </p>
-          <button class="btn" type="button">ONLINE-BOOKING</button>
+          <div class="about-right-side">
+            <p class="uppertitle">About</p>
+            <h2 class="title">Best Barbershop in your city</h2>
+            <p class="subtitle"
+              >If you want to add more confidence to your image, you should visit us.</p
+            >
+            <p class="about-desc">
+              We are a team that never stops at what has been achieved and are thirsty for changes.
+              And when you fall into the hands of our master, you will never be the same again. We
+              are a team that is always "on the same wave" with clients. Therefore, we are always
+              ready to improve everyone who comes to us!
+            </p>
+            <button class="btn" type="button">ONLINE-BOOKING</button>
+          </div>
         </div>
       </section>
       <!-- Price section -->
@@ -146,16 +150,18 @@
           <h2 class="title title-theme-dark">Services and prices</h2>
           <div class="price-wrapper">
             <ul class="price-list">
-              <li class="price-item"
-                >Men’s haircut <span class="price-line"></span> from 300 uah.</li
-              >
-              <li class="price-item">Beard trim <span class="price-line"></span> from 300 uah.</li>
-              <li class="price-item"
-                >Mustache trim <span class="price-line"></span> from 200 uah.</li
-              >
-              <li class="price-item"
-                >Straight razor <span class="price-line"></span> shave from 200 uah.</li
-              >
+              <li class="price-item">
+                Men’s haircut <span class="price-line"></span> from 300 uah.
+              </li>
+              <li class="price-item">
+                Beard trim <span class="price-line"></span> from 300 uah.
+              </li>
+              <li class="price-item">
+                Mustache trim <span class="price-line"></span> from 200 uah.
+              </li>
+              <li class="price-item">
+                Straight razor <span class="price-line"></span> shave from 200 uah.
+              </li>
             </ul>
             <ul class="price-list">
               <li class="price-item"
@@ -172,36 +178,40 @@
               >
             </ul>
           </div>
-          <button class="btn btn-theme-dark" type="button">online-booking</button>
+          <button class="price-btn btn btn-theme-dark" type="button">online-booking</button>
         </div>
       </section>
       <!-- Benefits section -->
       <section class="benefits section">
-        <div class="container">
-          <ul class="benefits-list">
-            <li class="benefits-item">
-              <p class="benefits-quentity">600<sup class="benefits-decor">&#43;</sup></p>
-              <p class="benefits-text">Satisfied customers per day</p>
-            </li>
-            <li class="benefits-item">
-              <p class="benefits-quentity">50<sup class="benefits-decor">&#43;</sup></p>
-              <p class="benefits-text">Awards for excellent service</p>
-            </li>
-            <li class="benefits-item">
-              <p class="benefits-quentity">20<sup class="benefits-decor">&#43;</sup></p>
-              <p class="benefits-text">Kyiv’s best professional barbers</p>
-            </li>
-            <li class="benefits-item">
-              <p class="benefits-quentity">100<sup class="benefits-decor">&#43;</sup></p>
-              <p class="benefits-text">Gifts for regular customers</p>
-            </li>
-          </ul>
-          <p class="uppertitle">Old traditional school</p>
-          <h2 class="title">Why people come to us?</h2>
-          <p class="subtitle">
-            Only good things are said about us. But it's better to see and feel 1 time than read 10
-            times.
-          </p>
+        <div class="benefits-container container">
+          <div class="benefits-left-side">
+            <ul class="benefits-list">
+              <li class="benefits-item">
+                <p class="benefits-quantity">600<sup class="benefits-decor">&#43;</sup></p>
+                <p class="benefits-text">Satisfied customers per day</p>
+              </li>
+              <li class="benefits-item">
+                <p class="benefits-quantity">50<sup class="benefits-decor">&#43;</sup></p>
+                <p class="benefits-text">Awards for excellent service</p>
+              </li>
+              <li class="benefits-item">
+                <p class="benefits-quantity">20<sup class="benefits-decor">&#43;</sup></p>
+                <p class="benefits-text">Kyiv’s best professional barbers</p>
+              </li>
+              <li class="benefits-item">
+                <p class="benefits-quantity">100<sup class="benefits-decor">&#43;</sup></p>
+                <p class="benefits-text">Gifts for regular customers</p>
+              </li>
+            </ul>
+          </div>
+          <div class="benefits-right-side">
+            <p class="uppertitle">Old traditional school</p>
+            <h2 class="title">Why people come to&nbsp;us?</h2>
+            <p class="subtitle">
+              Only good things are said about us. But it's better to see and feel 1 time than read
+              10 times.
+            </p>
+          </div>
         </div>
       </section>
       <!-- Team section -->

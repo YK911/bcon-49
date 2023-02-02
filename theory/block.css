@@ -1,35 +1,103 @@
-.border-box {
+body {
+  padding-top: 140px;
+}
+
+.flexbox-container {
+  width: 700px;
+  /* height: 500px; */
+  margin: 0 auto;
+
+  background-color: lightblue;
+}
+
+.flexbox-item {
+  /* width: 180px; */
+  height: 180px;
+
+  font-size: 4em;
+  line-height: 180px;
+  color: aliceblue;
+  text-align: center;
   background-color: lightgreen;
-  color: green;
 
-  width: 400px;
-  padding: 20px 50px;
+  box-shadow: 4px 4px 10px rgb(0 0 0 / 0.2);
+}
+/* .flexbox-item:nth-child(2) {
+  background-color: tomato;
+  font-size: 7em;
+} */
+/**
+  |============================
+  | Flexbox layout
+  |============================
+*/
+.flexbox-container {
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 
-  margin-top: 20px;
-  margin-bottom: 20px;
+  outline: 2px solid red; */
 
-  margin-left: auto;
-  margin-right: auto;
+  /* justify-content: space-between; */
+  /* justify-content: center;
+  align-items: center; */
 
-  border-radius: 10px 40px;
+  /*
+  == Default properties ==
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: stretch;
+  flex-wrap: nowrap;
+
+  */
 }
 
-.text {
-  margin-top: 150px;
+.flexbox-item {
+  /* margin-bottom: 80px;
+  margin-right: 80px; */
 }
 
-section {
-  outline: 2px solid red;
-  outline-offset: -2px;
+/* .flexbox-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
 
-span {
-  display: inline-block;
+.flexbox-item:nth-child(3n + 3) {
+  margin-right: 0;
+} */
 
-  display: none;
+/**
+  |============================
+  | Flexbox grid
+  |============================
+*/
+:root {
+  --items: 3;
+  --indent: 20px;
+}
+/* Base class for grid */
+.flexbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
 
-  padding-top: 20px;
-  padding-bottom: 20px;
+.flexbox-item {
+  width: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
 
-  margin-top: 50px;
+/*  */
+.items-3 {
+  --indent: 40px;
+
+  margin-bottom: 30px;
+}
+.items-4 {
+  --items: 4;
+  margin-bottom: 30px;
+}
+
+.items-6 {
+  --items: 6;
+  --indent: 30px;
 }
