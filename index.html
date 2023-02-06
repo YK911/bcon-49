@@ -63,7 +63,9 @@
           </ul>
         </nav>
         <a class="header-link" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="header-button btn btn-theme-dark" type="button">Online-booking</button>
+        <button class="header-button btn btn-theme-dark" type="button" data-modal-open
+          >Online-booking</button
+        >
       </div>
     </header>
     <main>
@@ -71,7 +73,7 @@
       <section class="hero">
         <div class="hero-container container">
           <div class="hero-left-side">
-            <ul class="media">
+            <ul class="hero-media media">
               <li class="media-item">
                 <a
                   class="media-link link"
@@ -95,25 +97,25 @@
             </ul>
           </div>
           <div class="hero-right-side">
-            <p class="uppertitle">A hair salon for men in Kyiv</p>
+            <p class="uppertitle uppertitle-theme-dark">A hair salon for men in Kyiv</p>
             <h1 class="hero-title">BarberShop</h1>
             <p class="hero-desc">
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
           </div>
           <!-- slider pagination -->
-          <ul class="slider-pagination" hidden>
-            <li class="slider-pagination-item"></li>
+          <ul class="slider-pagination">
+            <li class="slider-pagination-item active"></li>
             <li class="slider-pagination-item"></li>
             <li class="slider-pagination-item"></li>
           </ul>
           <!-- slider controls -->
-          <ul class="slider-controls" hidden>
+          <ul class="slider-controls">
             <li class="slider-controls-item">
-              <button class="slider-controls-btn" type="button">Back</button>
+              <button class="slider-controls-btn prev" type="button" disabled>Back</button>
             </li>
             <li class="slider-controls-item">
-              <button class="slider-controls-btn" type="button">Forward</button>
+              <button class="slider-controls-btn next" type="button">Forward</button>
             </li>
           </ul>
         </div>
@@ -489,5 +491,18 @@
         </ul>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg class="modal-icon" width="25" height="25">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
