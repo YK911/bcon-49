@@ -29,13 +29,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
+    <!-- AOS library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Custom styles -->
     <link href="./css/styles.css" rel="stylesheet" />
   </head>
 
   <body>
     <!-- Header section -->
-    <header class="header">
+    <header class="header" data-header>
       <div class="header-container container">
         <a class="logo" href="./index.html">
           <img
@@ -97,7 +99,9 @@
             </ul>
           </div>
           <div class="hero-right-side">
-            <p class="uppertitle uppertitle-theme-dark">A hair salon for men in Kyiv</p>
+            <p class="hero-uppertitle uppertitle uppertitle-theme-dark"
+              >A hair salon for men in Kyiv</p
+            >
             <h1 class="hero-title">BarberShop</h1>
             <p class="hero-desc">
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
@@ -190,19 +194,39 @@
         <div class="benefits-container container">
           <div class="benefits-left-side">
             <ul class="benefits-list">
-              <li class="benefits-item">
+              <li
+                class="benefits-item"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-delay="250"
+              >
                 <p class="benefits-quantity">600<sup class="benefits-decor">&#43;</sup></p>
                 <p class="benefits-text">Satisfied customers per day</p>
               </li>
-              <li class="benefits-item">
+              <li
+                class="benefits-item"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-delay="500"
+              >
                 <p class="benefits-quantity">50<sup class="benefits-decor">&#43;</sup></p>
                 <p class="benefits-text">Awards for excellent service</p>
               </li>
-              <li class="benefits-item">
+              <li
+                class="benefits-item"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-delay="750"
+              >
                 <p class="benefits-quantity">20<sup class="benefits-decor">&#43;</sup></p>
                 <p class="benefits-text">Kyiv’s best professional barbers</p>
               </li>
-              <li class="benefits-item">
+              <li
+                class="benefits-item"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-delay="1000"
+              >
                 <p class="benefits-quantity">100<sup class="benefits-decor">&#43;</sup></p>
                 <p class="benefits-text">Gifts for regular customers</p>
               </li>
@@ -223,171 +247,177 @@
         <div class="container">
           <p class="uppertitle">For true enjoyers of the atmosphere</p>
           <h2 class="title">Our barbers</h2>
-          <ul class="team-list">
-            <li class="team-item">
+          <ul class="team-list card-set">
+            <li class="team-item card-set-item">
               <img src="./images/team/img-1.jpg" alt="John Smith" width="370" height="346" />
-              <p class="team-name">John Smith</p>
-              <p class="team-position">Extreme Barber</p>
-              <ul class="socials">
-                <li class="socials-item">
-                  <a
-                    class="socials-link"
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link"
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link"
-                    href="https://facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link"
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+              <div class="team-wrapper">
+                <p class="team-name">John Smith</p>
+                <p class="team-position">Extreme Barber</p>
+                <ul class="socials">
+                  <li class="socials-item">
+                    <a
+                      class="socials-link"
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link"
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link"
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link"
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li class="team-item">
+            <li class="team-item card-set-item">
               <img src="./images/team/img-2.jpg" alt="Michele Doe" width="370" height="346" />
-              <p class="team-name">Michele Doe</p>
-              <p class="team-position">Extreme Barber</p>
-              <ul class="socials">
-                <li class="socials-item">
-                  <a
-                    class="socials-link"
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link"
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link"
-                    href="https://facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link"
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+              <div class="team-wrapper">
+                <p class="team-name">Michele Doe</p>
+                <p class="team-position">Extreme Barber</p>
+                <ul class="socials">
+                  <li class="socials-item">
+                    <a
+                      class="socials-link"
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link"
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link"
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link"
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li class="team-item">
+            <li class="team-item card-set-item">
               <img src="./images/team/img-3.jpg" alt="Alan Black" width="370" height="346" />
-              <p class="team-name">Alan Black</p>
-              <p class="team-position">Extreme Barber</p>
-              <ul class="socials">
-                <li class="socials-item">
-                  <a
-                    class="socials-link"
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link"
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link"
-                    href="https://facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link"
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="socials-icon" width="20" height="20">
-                      <use href="./images/icons.svg#linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+              <div class="team-wrapper">
+                <p class="team-name">Alan Black</p>
+                <p class="team-position">Extreme Barber</p>
+                <ul class="socials">
+                  <li class="socials-item">
+                    <a
+                      class="socials-link"
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link"
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link"
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link"
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -395,10 +425,10 @@
       <!-- Gallery section -->
       <section class="gallery section">
         <div class="container">
-          <p class="uppertitle">In Latin, "barba" means "beard"</p>
+          <p class="gallery-uppertitle uppertitle">In Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">BarberShop gallery</h2>
-          <ul class="gallery-list">
-            <li class="gallery-item">
+          <ul class="gallery-list card-set">
+            <li class="gallery-item card-set-item">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-1.jpg"
@@ -407,7 +437,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item">
+            <li class="gallery-item card-set-item">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-2.jpg"
@@ -416,7 +446,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item">
+            <li class="gallery-item card-set-item">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-3.jpg"
@@ -425,7 +455,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item">
+            <li class="gallery-item card-set-item">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-4.jpg"
@@ -442,6 +472,40 @@
           <!-- Booking section -->
           <section class="booking section">
             <h2 class="title title-theme-dark">Online-booking</h2>
+            <form class="booking-form" name="booking_form" autocomplete="off">
+              <div class="booking-form-wrapper">
+                <label class="booking-form-field">
+                  <input
+                    class="booking-form-input"
+                    type="text"
+                    name="user_name"
+                    placeholder="Antony Black"
+                    required
+                  />
+                  <span class="booking-form-label">Name*</span>
+                </label>
+                <label class="booking-form-field">
+                  <input
+                    class="booking-form-input"
+                    type="email"
+                    name="user_mail"
+                    placeholder="example@mail.com"
+                    required
+                  />
+                  <span class="booking-form-label">Phone*</span>
+                </label>
+              </div>
+              <label class="booking-form-field">
+                <textarea
+                  class="booking-form-message"
+                  name="user_message"
+                  rows="4"
+                  placeholder="Type your message..."
+                ></textarea>
+                <span class="booking-form-label">Phone</span>
+              </label>
+              <button class="btn btn-theme-dark" type="submit">Send</button>
+            </form>
           </section>
           <!-- Contacts section -->
           <section class="contacts section" id="contacts">
@@ -465,7 +529,7 @@
     </main>
     <!-- Footer section -->
     <footer class="footer">
-      <div class="container">
+      <div class="footer-container container">
         <p class="copyright">&#169; Copyright 2020</p>
         <ul class="media">
           <li class="media-item">
@@ -503,6 +567,9 @@
       </div>
     </div>
 
+    <script src="./js/header.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/animation-on-scroll.js"></script>
   </body>
 </html>
