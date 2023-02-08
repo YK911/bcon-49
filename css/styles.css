@@ -8,6 +8,7 @@
   --accent-txt-cl: #ff6c00;
   --light-txt-cl: #ffffff;
   --gray-txt-cl: rgb(157, 164, 189);
+  --gray-40-txt-cl: rgba(157, 164, 189, 0.4);
   --gray-60-txt-cl: rgba(157, 164, 189, 0.6);
 
   --main-bg-cl: #303030;
@@ -166,7 +167,6 @@ img {
   outline: 2px solid red;
   outline-offset: -2px; */
 }
-
 .uppertitle {
   display: flex;
   align-items: center;
@@ -272,29 +272,31 @@ img {
 
   transition: var(--anim-fast);
 }
-.header.no-transparency {
+.header--no-transparency {
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(3px);
 }
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
 }
-.logo {
+.header__logo {
   margin-right: 130px;
 }
-.logo-img {
+.logo {
+  width: 70px;
+  height: 56px;
 }
 .nav {
   margin-right: auto;
 }
-.nav-list {
+.nav__list {
   display: flex;
   gap: 30px;
 }
-.nav-item {
+.nav__item {
 }
-.nav-link {
+.nav__link {
   display: block;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -306,11 +308,11 @@ img {
 
   transition: color var(--anim-fast);
 }
-.nav-link:hover,
-.nav-link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--accent-txt-cl);
 }
-.header-link {
+.header__link {
   margin-right: 40px;
 
   font-weight: 600;
@@ -321,11 +323,11 @@ img {
 
   transition: color var(--anim-fast);
 }
-.header-link:hover,
-.header-link:focus {
+.header__link:hover,
+.header__link:focus {
   color: var(--accent-txt-cl);
 }
-.header-button {
+.header__btn {
   margin-right: 20px;
 }
 /**
@@ -474,28 +476,28 @@ img {
 */
 .about {
 }
-.about-container {
+.about__container {
   display: flex;
   gap: 30px;
 }
-.about-list {
+.about__list {
   display: flex;
   gap: 30px;
 }
-.about-item {
+.about__item {
   overflow: hidden;
   cursor: zoom-in;
 }
-.about-img {
+.about__img {
   transition: transform var(--anim-slow);
 }
-.about-item:hover .about-img {
+.about__item:hover .about__img {
   transform: scale(1.25);
 }
-.about-right-side {
+.about__right-side {
   width: 470px;
 }
-.about-desc {
+.about__desc {
   margin-bottom: 42px;
 
   font-size: 14px;
@@ -735,6 +737,136 @@ img {
 .booking {
   width: 570px;
 }
+/* Booking form */
+.booking-form {
+}
+.booking-form-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  margin-bottom: 44px;
+}
+.booking-form-field {
+  position: relative;
+  display: block;
+}
+.booking-form-input {
+  display: block;
+  width: 270px;
+  height: 24px;
+
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  color: var(--light-txt-cl);
+
+  border: none;
+  border-bottom: 1px solid var(--gray-40-txt-cl);
+  background-color: transparent;
+  outline: transparent;
+
+  transition: border-color var(--anim-fast);
+}
+.booking-form-input::placeholder,
+.booking-form-message::placeholder {
+  transition: opacity 250ms ease 150ms;
+  opacity: 0;
+}
+.booking-form-input:focus::placeholder,
+.booking-form-message:focus::placeholder {
+  opacity: 1;
+}
+.booking-form-input:focus,
+.booking-form-input:not(:placeholder-shown),
+.booking-form-message:focus,
+.booking-form-message:not(:placeholder-shown) {
+  border-color: var(--light-txt-cl);
+}
+.booking-form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-40-txt-cl);
+
+  transform-origin: center left;
+  transition: transform var(--anim-fast), color var(--anim-fast);
+}
+.booking-form-input:focus + .booking-form-label,
+.booking-form-input:not(:placeholder-shown) + .booking-form-label,
+.booking-form-message:focus + .booking-form-label,
+.booking-form-message:not(:placeholder-shown) + .booking-form-label {
+  color: var(--light-txt-cl);
+  transform: translateY(-100%) scale(0.8);
+}
+.booking-form-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.booking-form-icon .success,
+.booking-form-icon .warning {
+  opacity: 0;
+  transform: scale(0.2);
+  transform-origin: center;
+  transition: opacity var(--anim-fast), transform var(--anim-fast), fill var(--anim-fast);
+}
+.booking-form-input:not(:placeholder-shown):required:valid ~ .booking-form-icon .success {
+  fill: rgb(50, 173, 1);
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 150ms;
+}
+.booking-form-input:not(:placeholder-shown):required:invalid ~ .booking-form-icon .warning {
+  fill: rgb(255, 187, 0);
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 150ms;
+}
+.warning-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(110%);
+  display: block;
+  width: 100%;
+
+  font-size: 10px;
+  text-align: center;
+  color: rgb(255, 187, 0);
+
+  opacity: 0;
+  transition: opacity var(--anim-fast);
+}
+.booking-form-input:not(:placeholder-shown):required:invalid ~ .warning-text {
+  opacity: 1;
+}
+.booking-form-message {
+  display: block;
+  width: 100%;
+  height: 56px;
+
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  color: var(--light-txt-cl);
+
+  border: none;
+  border-bottom: 1px solid var(--gray-40-txt-cl);
+  background-color: transparent;
+  outline: transparent;
+  resize: none;
+}
+
+.booking-form-btn {
+  margin-top: 44px;
+}
 /**
   |============================
   | Contacts styles
@@ -816,8 +948,9 @@ img {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 
-  width: 400px;
-  min-height: 550px;
+  width: 528px;
+  min-height: 581px;
+  padding: 40px;
 
   background-color: #fff;
   border-radius: 16px;
@@ -846,13 +979,93 @@ img {
   border-radius: 50%;
   background-color: transparent;
 }
-.modal-icon {
+.modal-title {
+  display: block;
+
+  text-align: center;
+  margin-bottom: 15px;
 }
-/**
-  |============================
-  | Form
-  |============================
-*/
-label {
-  color: white;
+.modal-form {
+}
+.modal-form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+.modal-form-group {
+  position: relative;
+  margin-bottom: 16px;
+}
+.modal-form-field {
+  display: block;
+  width: 100%;
+  height: 40px;
+
+  padding: 12px 42px;
+  border-radius: 4px;
+  outline: transparent;
+  border: 1px solid var(--main-bg-cl);
+  transition: 300ms;
+}
+.modal-form-field:focus {
+  border-color: var(--accent-bg-cl);
+}
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: 300ms;
+}
+.modal-form-field:focus + .modal-form-icon {
+  fill: var(--accent-bg-cl);
+}
+.modal-form-comment {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  resize: none;
+
+  border-radius: 4px;
+  outline: transparent;
+  border: 1px solid var(--main-bg-cl);
+  transition: 300ms;
+}
+
+.modal-form-agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.modal-form-checkbox {
+  appearance: none;
+
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+
+  border: 2px solid var(--main-bg-cl);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='white'%3E%3Cpath d='M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: 300ms;
+}
+.modal-form-checkbox:checked {
+  border-color: var(--accent-bg-cl);
+  background-color: var(--accent-bg-cl);
+}
+.modal-form-desc {
+  font-size: 12px;
+}
+.modal-form-link {
+  color: var(--accent-txt-cl);
+  text-decoration: underline;
+}
+.modal-form-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
 }
