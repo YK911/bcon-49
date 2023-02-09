@@ -1,0 +1,7 @@
+@use 'sass:math';
+
+@function round($fs, $lh) {
+  $lh-round: $lh / $fs;
+
+  @return math.round($lh-round * 100) / 100;
+}

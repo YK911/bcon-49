@@ -1,0 +1,16 @@
+.title {
+  margin-bottom: 20px;
+
+  font-family: var(--secondary-font);
+  @include fonts(42px, 49px, 0.05em);
+
+  // font-size: 42px;
+  // line-height: calc(49 / 42);
+  // letter-spacing: 0.05em;
+
+  &-theme-dark {
+    margin-bottom: 44px;
+
+    color: var(--light-txt-cl);
+  }
+}

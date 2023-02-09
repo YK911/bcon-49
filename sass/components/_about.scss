@@ -1,0 +1,37 @@
+/**
+  |============================
+  | About styles
+  |============================
+*/
+.about {
+  @include section;
+  // @extend %section;
+}
+.about__container {
+  display: flex;
+  gap: 30px;
+}
+.about__list {
+  display: flex;
+  gap: 30px;
+}
+.about__item {
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.about__img {
+  transition: transform var(--anim-slow);
+}
+.about__item:hover .about__img {
+  transform: scale(1.25);
+}
+.about__right-side {
+  width: 470px;
+}
+.about__desc {
+  margin-bottom: 42px;
+
+  font-size: 14px;
+  line-height: calc(26 / 14);
+  color: #555555;
+}

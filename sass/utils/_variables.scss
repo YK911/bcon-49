@@ -1,0 +1,28 @@
+:root {
+  /* Fonts */
+  --primary-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* Colors */
+  --main-txt-cl: #303030;
+  --accent-txt-cl: #ff6c00;
+  --light-txt-cl: #ffffff;
+  --gray-txt-cl: rgb(157, 164, 189);
+  --gray-40-txt-cl: rgba(157, 164, 189, 0.4);
+  --gray-60-txt-cl: rgba(157, 164, 189, 0.6);
+
+  --main-bg-cl: #303030;
+  --accent-bg-cl: #ff6c00;
+
+  /* Others */
+  --radius: 25px;
+  --anim-fast: 400ms ease-in;
+  --anim-slow: 800ms ease-in-out;
+
+  --header-idx: 10;
+  --backdrop-idx: 100;
+  /* indent for elements in grid (default value) */
+  --indent: 30px;
+  /* quantity of items in grid (default value) */
+  --items: 3;
+}

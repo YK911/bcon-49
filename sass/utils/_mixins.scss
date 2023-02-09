@@ -1,0 +1,13 @@
+@mixin section($pt: 120px, $pb: $pt) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+
+@mixin fonts($fs: 18px, $lh: 30px, $ls: 0.02em, $fw: false) {
+  @if $fw {
+    font-weight: $fw;
+  }
+  font-size: $fs;
+  line-height: round($fs, $lh);
+  letter-spacing: $ls;
+}

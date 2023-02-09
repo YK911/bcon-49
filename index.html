@@ -32,7 +32,8 @@
     <!-- AOS library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Custom styles -->
-    <link href="./css/styles.css" rel="stylesheet" />
+    <link href="./css/main.min.css" rel="stylesheet" />
+    <!-- <link href="./css/styles.css" rel="stylesheet" /> -->
   </head>
 
   <body>
@@ -125,7 +126,7 @@
         </div>
       </section>
       <!-- About section -->
-      <section class="about section" id="about">
+      <section class="about" id="about">
         <div class="about__container container">
           <ul class="about__list">
             <li class="about__item">
@@ -152,7 +153,7 @@
         </div>
       </section>
       <!-- Price section -->
-      <section class="price section" id="price">
+      <section class="price" id="price">
         <div class="container">
           <p class="uppertitle uppertitle-theme-dark">Spend your time with the best masters</p>
           <h2 class="title title-theme-dark">Services and prices</h2>
@@ -186,11 +187,11 @@
               </li>
             </ul>
           </div>
-          <button class="price-btn btn btn-theme-dark" type="button">online-booking</button>
+          <button class="price-btn btn btn--theme-dark" type="button">online-booking</button>
         </div>
       </section>
       <!-- Benefits section -->
-      <section class="benefits section">
+      <section class="benefits">
         <div class="benefits-container container">
           <div class="benefits-left-side">
             <ul class="benefits-list">
@@ -243,12 +244,12 @@
         </div>
       </section>
       <!-- Team section -->
-      <section class="team section" id="team">
+      <section class="team" id="team">
         <div class="container">
           <p class="uppertitle">For true enjoyers of the atmosphere</p>
           <h2 class="title">Our barbers</h2>
-          <ul class="team-list card-set">
-            <li class="team-item card-set-item">
+          <ul class="team-list">
+            <li class="team-item">
               <img src="./images/team/img-1.jpg" alt="John Smith" width="370" height="346" />
               <div class="team-wrapper">
                 <p class="team-name">John Smith</p>
@@ -305,7 +306,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team-item card-set-item">
+            <li class="team-item">
               <img src="./images/team/img-2.jpg" alt="Michele Doe" width="370" height="346" />
               <div class="team-wrapper">
                 <p class="team-name">Michele Doe</p>
@@ -362,7 +363,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team-item card-set-item">
+            <li class="team-item">
               <img src="./images/team/img-3.jpg" alt="Alan Black" width="370" height="346" />
               <div class="team-wrapper">
                 <p class="team-name">Alan Black</p>
@@ -423,12 +424,12 @@
         </div>
       </section>
       <!-- Gallery section -->
-      <section class="gallery section">
+      <section class="gallery">
         <div class="container">
           <p class="gallery-uppertitle uppertitle">In Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">BarberShop gallery</h2>
-          <ul class="gallery-list card-set">
-            <li class="gallery-item card-set-item">
+          <ul class="gallery-list">
+            <li class="gallery-item">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-1.jpg"
@@ -437,7 +438,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-2.jpg"
@@ -446,7 +447,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-3.jpg"
@@ -455,7 +456,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-4.jpg"
@@ -470,7 +471,7 @@
       <div class="booking-wrapper">
         <div class="booking-container container">
           <!-- Booking section -->
-          <section class="booking section">
+          <section class="booking">
             <h2 class="title title-theme-dark">Online-booking</h2>
             <form class="booking-form" name="booking_form" autocomplete="off">
               <div class="booking-form-wrapper">
@@ -512,19 +513,32 @@
                 ></textarea>
                 <span class="booking-form-label">Message</span>
               </label>
-              <button class="booking-form-btn btn btn-theme-dark" type="submit">Send</button>
+              <button class="booking-form-btn btn btn--theme-dark" type="submit">Send</button>
             </form>
           </section>
           <!-- Contacts section -->
-          <section class="contacts section" id="contacts">
+          <section class="contacts" id="contacts">
             <h2 class="title title-theme-dark">Contacts</h2>
             <address class="contacts-group">
               <a class="contacts-link" href target="_blank" rel="noopener noreferrer">
+                <svg class="contacts-icon" width="24" height="24">
+                  <use href="./images/icons.svg#map-pin"></use>
+                </svg>
                 st. Vasylkivska, 7A <br />
                 Kiev, 08132
               </a>
-              <a class="contacts-link" href="tel:+380441111111">+38 044 111 11 11</a>
-              <a class="contacts-link" href="mailto:barbershop@email.com">barbershop@email.com</a>
+              <a class="contacts-link" href="tel:+380441111111">
+                <svg class="contacts-icon" width="24" height="24">
+                  <use href="./images/icons.svg#phone"></use>
+                </svg>
+                +38 044 111 11 11
+              </a>
+              <a class="contacts-link" href="mailto:barbershop@email.com">
+                <svg class="contacts-icon" width="24" height="24">
+                  <use href="./images/icons.svg#mail"></use>
+                </svg>
+                barbershop@email.com
+              </a>
             </address>
             <p class="schedule-uppertitle">Working hours</p>
             <p class="schedule-desc">
@@ -565,7 +579,7 @@
     </footer>
 
     <!-- Modal window -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-icon" width="25" height="25">

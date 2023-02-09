@@ -1,0 +1,15 @@
+/**
+  |============================
+  | Base styles
+  |============================
+*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--primary-font);
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: var(--main-txt-cl);
+}
