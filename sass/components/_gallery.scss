@@ -1,0 +1,13 @@
+.gallery {
+  @extend %section;
+}
+.gallery-uppertitle {
+  margin-bottom: 44px;
+}
+.gallery-list {
+  --items: 4;
+  @extend %card-set;
+}
+.gallery-item {
+  @extend %card-set-item;
+}

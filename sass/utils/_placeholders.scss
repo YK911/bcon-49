@@ -1,0 +1,13 @@
+%card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+%card-set-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+%section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
