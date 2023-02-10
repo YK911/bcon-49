@@ -19,9 +19,14 @@
   align-items: center;
 }
 .header__logo {
-  margin-right: 130px;
+  margin-right: 70px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 130px;
+  }
 }
 .header__link {
+  display: none;
   margin-right: 40px;
 
   font-weight: 600;
@@ -39,4 +44,26 @@
 }
 .header__btn {
   margin-right: 20px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.header__menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin-left: auto;
+
+  background-color: transparent;
+  border: none;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }

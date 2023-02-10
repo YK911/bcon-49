@@ -6,9 +6,6 @@
 
   @include fonts(11px, 15px, $fw: 600);
 
-  // font-weight: 600;
-  // font-size: 11px;
-  // line-height: calc(15 / 11);
   text-transform: uppercase;
 
   &::before {
