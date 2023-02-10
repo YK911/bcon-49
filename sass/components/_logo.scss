@@ -2,3 +2,11 @@
   width: 70px;
   height: 56px;
 }
+
+.logo-img {
+  fill: var(--light-txt-cl);
+
+  @media screen and (min-width: 768px) {
+    fill: var(--main-bg-cl);
+  }
+}

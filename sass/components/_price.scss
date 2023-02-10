@@ -1,8 +1,3 @@
-/**
-  |============================
-  | Price styles
-  |============================
-*/
 .price {
   @extend %section;
 
@@ -16,37 +11,74 @@
   background-position: center;
 }
 .price-wrapper {
-  display: flex;
-  gap: 30px;
-
   margin-bottom: 44px;
+
+  @media screen and (max-width: 767px) {
+    padding: 30px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 32px 34px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    background-image: linear-gradient(180deg, #171a24, rgba(23, 26, 36, 0.2));
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 30px;
+  }
 }
 .price-list {
-  width: 570px;
-  padding: 30px 20px;
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 570px;
+    padding: 30px 20px;
+
+    &:first-child {
+      background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    }
+    &:last-child {
+      background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+    }
+  }
 }
-.price-list:first-child {
-  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
-}
-.price-list:last-child {
-  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
-}
+
 .price-item {
   display: flex;
   align-items: baseline;
   gap: 12px;
 
+  letter-spacing: 0.02em;
   color: var(--gray-txt-cl);
+
+  @media screen and (max-width: 479px) {
+    font-size: 10px;
+    line-height: calc(20 / 14);
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    font-size: 14px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background: rgba(157, 164, 189, 0.2);
+  }
 }
-.price-item:not(:last-child) {
-  margin-bottom: 20px;
-}
-.price-item::before {
-  content: '';
-  flex-grow: 1;
-  height: 1px;
-  background: rgba(157, 164, 189, 0.2);
-}
+
 .price-service {
   order: -1;
 }

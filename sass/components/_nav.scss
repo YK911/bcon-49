@@ -1,9 +1,17 @@
 .nav {
   margin-right: auto;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 .nav__list {
   display: flex;
-  gap: 30px;
+  gap: 16px;
+
+  @media screen and (min-width: 1200px) {
+    gap: 30px;
+  }
 }
 .nav__link {
   display: block;
