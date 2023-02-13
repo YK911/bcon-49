@@ -284,7 +284,7 @@ button {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -775,9 +775,47 @@ img {
   margin-left: auto;
   margin-right: auto;
   background-color: #111319;
-  background-image: url(../images/price/bg-img.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  background-image: url("../images/price/bg-img_mob@1x.png");
+  background-image: -webkit-image-set(url("../images/price/bg-img_mob@1x.webp") 1x);
+  background-image: image-set(url("../images/price/bg-img_mob@1x.webp") 1x);
+}
+@media screen and (min-width: 479.98px) and (min-device-pixel-ratio: 2), screen and (min-width: 479.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 479.98px) and (min-resolution: 192dpi), screen and (min-width: 479.98px) and (min-resolution: 2dppx) {
+  .price {
+    background-image: url("../images/price/bg-img_mob@2x.png");
+    background-image: -webkit-image-set(url("../images/price/bg-img_mob@2x.webp") 2x);
+    background-image: image-set(url("../images/price/bg-img_mob@2x.webp") 2x);
+  }
+}
+@media screen and (min-width: 481px) {
+  .price {
+    background-image: url("../images/price/bg-img_tab@1x.png");
+    background-image: -webkit-image-set(url("../images/price/bg-img_tab@1x.webp") 1x);
+    background-image: image-set(url("../images/price/bg-img_tab@1x.webp") 1x);
+  }
+}
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
+  .price {
+    background-image: url("../images/price/bg-img_tab@2x.png");
+    background-image: -webkit-image-set(url("../images/price/bg-img_tab@2x.webp") 2x);
+    background-image: image-set(url("../images/price/bg-img_tab@2x.webp") 2x);
+  }
+}
+@media screen and (min-width: 769px) {
+  .price {
+    background-image: url("../images/price/bg-img_desk@1x.png");
+    background-image: -webkit-image-set(url("../images/price/bg-img_desk@1x.webp") 1x);
+    background-image: image-set(url("../images/price/bg-img_desk@1x.webp") 1x);
+  }
+}
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  .price {
+    background-image: url("../images/price/bg-img_desk@2x.png");
+    background-image: -webkit-image-set(url("../images/price/bg-img_desk@2x.webp") 2x);
+    background-image: image-set(url("../images/price/bg-img_desk@2x.webp") 2x);
+  }
 }
 
 .price-wrapper {
@@ -873,6 +911,12 @@ img {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .selector {
+    background-color: #fff;
+  }
+}
+
 .benefits-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -941,6 +985,21 @@ img {
 
 .team {
   background-color: #f7f7f7;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-container {
+    max-width: 480px;
+  }
+}
+
+.team-list {
+  --items: 1;
+}
+@media screen and (min-width: 1200px) {
+  .team-list {
+    --items: 3;
+  }
 }
 
 .team-wrapper {
@@ -1013,7 +1072,17 @@ img {
 }
 
 .gallery-list {
-  --items: 4;
+  --items: 1;
+}
+@media screen and (min-width: 768px) {
+  .gallery-list {
+    --items: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery-list {
+    --items: 4;
+  }
 }
 
 /**
