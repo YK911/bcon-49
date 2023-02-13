@@ -243,13 +243,33 @@
         </div>
       </section> -->
       <!-- Team section -->
-      <!-- <section class="team" id="team">
-        <div class="container">
+      <section class="team" id="team">
+        <div class="team-container container">
           <p class="uppertitle">For true enjoyers of the atmosphere</p>
           <h2 class="title">Our barbers</h2>
           <ul class="team-list">
             <li class="team-item">
-              <img src="./images/team/img-1.jpg" alt="John Smith" width="370" height="346" />
+              <!--
+                screen = 225px -> frame = 225px
+                dpr: 3x
+                frame * dpr = 675px
+               -->
+              <img
+                srcset="
+                  ./images/team/img-1_370.jpg 370w,
+                  ./images/team/img-1_418.jpg 418w,
+                  ./images/team/img-1_450.jpg 450w,
+                  ./images/team/img-1_740.jpg 740w,
+                  ./images/team/img-1_836.jpg 836w,
+                  ./images/team/img-1_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                src="./images/team/img-1_418.jpg"
+                alt="John Smith"
+                width="450"
+                height="346"
+                loading="lazy"
+              />
               <div class="team-wrapper">
                 <p class="team-name">John Smith</p>
                 <p class="team-position">Extreme Barber</p>
@@ -306,7 +326,22 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="./images/team/img-2.jpg" alt="Michele Doe" width="370" height="346" />
+              <img
+                srcset="
+                  ./images/team/img-2_370.jpg 370w,
+                  ./images/team/img-2_418.jpg 418w,
+                  ./images/team/img-2_450.jpg 450w,
+                  ./images/team/img-2_740.jpg 740w,
+                  ./images/team/img-2_836.jpg 836w,
+                  ./images/team/img-2_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                src="./images/team/img-2_418.jpg"
+                alt="Michele Doe"
+                width="450"
+                height="346"
+                loading="lazy"
+              />
               <div class="team-wrapper">
                 <p class="team-name">Michele Doe</p>
                 <p class="team-position">Extreme Barber</p>
@@ -363,7 +398,22 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="./images/team/img-3.jpg" alt="Alan Black" width="370" height="346" />
+              <img
+                srcset="
+                  ./images/team/img-3_370.jpg 370w,
+                  ./images/team/img-3_418.jpg 418w,
+                  ./images/team/img-3_450.jpg 450w,
+                  ./images/team/img-3_740.jpg 740w,
+                  ./images/team/img-3_836.jpg 836w,
+                  ./images/team/img-3_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                src="./images/team/img-3_418.jpg"
+                alt="Alan Black"
+                width="450"
+                height="346"
+                loading="lazy"
+              />
               <div class="team-wrapper">
                 <p class="team-name">Alan Black</p>
                 <p class="team-position">Extreme Barber</p>
@@ -421,52 +471,268 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Gallery section -->
-      <!-- <section class="gallery">
+      <section class="gallery">
         <div class="container">
           <p class="gallery-uppertitle uppertitle">In Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">BarberShop gallery</h2>
           <ul class="gallery-list">
             <li class="gallery-item">
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-1.jpg"
-                alt="Gallery 1"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-1_desk@1x.webp 1x,
+                    ./images/gallery/img-1_desk@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-1_desk@1x.jpg 1x,
+                    ./images/gallery/img-1_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-1_tab@1x.webp 1x,
+                    ./images/gallery/img-1_tab@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-1_tab@1x.jpg 1x,
+                    ./images/gallery/img-1_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Phone screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-1_mob@1x.webp 1x,
+                    ./images/gallery/img-1_mob@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-1_mob@1x.jpg 1x,
+                    ./images/gallery/img-1_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-1_mob@1x.jpg"
+                  alt="Gallery 1"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-2.jpg"
-                alt="Gallery 2"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-2_desk@1x.webp 1x,
+                    ./images/gallery/img-2_desk@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-2_desk@1x.jpg 1x,
+                    ./images/gallery/img-2_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-2_tab@1x.webp 1x,
+                    ./images/gallery/img-2_tab@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-2_tab@1x.jpg 1x,
+                    ./images/gallery/img-2_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Phone screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-2_mob@1x.webp 1x,
+                    ./images/gallery/img-2_mob@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-2_mob@1x.jpg 1x,
+                    ./images/gallery/img-2_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-2_mob@1x.jpg"
+                  alt="Gallery 2"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-3.jpg"
-                alt="Gallery 3"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-3_desk@1x.webp 1x,
+                    ./images/gallery/img-3_desk@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-3_desk@1x.jpg 1x,
+                    ./images/gallery/img-3_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-3_tab@1x.webp 1x,
+                    ./images/gallery/img-3_tab@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-3_tab@1x.jpg 1x,
+                    ./images/gallery/img-3_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Phone screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-3_mob@1x.webp 1x,
+                    ./images/gallery/img-3_mob@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-3_mob@1x.jpg 1x,
+                    ./images/gallery/img-3_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-3_mob@1x.jpg"
+                  alt="Gallery 3"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-4.jpg"
-                alt="Gallery 4"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-4_desk@1x.webp 1x,
+                    ./images/gallery/img-4_desk@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-4_desk@1x.jpg 1x,
+                    ./images/gallery/img-4_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-4_tab@1x.webp 1x,
+                    ./images/gallery/img-4_tab@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-4_tab@1x.jpg 1x,
+                    ./images/gallery/img-4_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Phone screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-4_mob@1x.webp 1x,
+                    ./images/gallery/img-4_mob@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-4_mob@1x.jpg 1x,
+                    ./images/gallery/img-4_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-4_mob@1x.jpg"
+                  alt="Gallery 4"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- <div class="booking-wrapper">
         <div class="booking-container container">
           <section class="booking">
